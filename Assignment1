@@ -1,0 +1,31 @@
+#include<stdio.h>
+int global_var = 20;//Global variable
+static int static_global_var=30;//Static global variable 
+void function()
+{
+    auto int a=50;//Automatic variable
+    static int b=100;//Static variable
+    register int register_var=150;//Register variable
+    //Print values
+    printf("Automatic Variable: %d\n" , a);
+    printf("Static local variable:  %d\n" , b);
+    printf("Register variable : %d\n" , register_var);
+    printf("Global variable :   %d\n", global_var);
+    printf("Static Globlal variable:   %d\n" , static_global_var);
+    //Modifying values
+    a=a+40;
+    b=b+30;
+    //End of Function
+}
+int main()
+{
+    //Print values
+    printf("Name : Gavril Seth\n");
+    printf("Class : CSE-AI&ML AG2 section\n");
+    printf("Reg. No. : RA2411026010934\n");
+    printf("1)First call :\n");
+    function();//First call  
+    printf("2)Second call ;\n");
+    function();//Second call
+    return 0;
+}
